@@ -1,15 +1,15 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
 
-import Header from 'src/shared/header/Header';
-import Footer from 'src/shared/footer/Footer';
+import MainNavigation from 'src/shared/components/navigation/MainNavigation';
 
 const MainLayout = () => {
     return (
         <>
-            <Header />
-            <Outlet />
-            <Footer />
+            <MainNavigation />
+            <main>
+                <Outlet />
+            </main>
         </>
     );
 };
