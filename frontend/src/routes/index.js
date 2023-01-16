@@ -4,6 +4,7 @@ import MainLayout from 'src/layouts/MainLayout';
 import User from 'src/user/pages/User';
 import NewPlace from 'src/places/pages/NewPlace';
 import PageNotFound from 'src/404/PageNotFound';
+import UserPlaces from 'src/places/pages/UserPlaces';
 
 const router = createBrowserRouter([
     {
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
             {
                 path: '/places/new',
                 element: <NewPlace />,
+            },
+            {
+                path: '/:userId/places',
+                element: <UserPlaces />,
             },
             {
                 path: '*',
