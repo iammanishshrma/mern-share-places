@@ -23,12 +23,7 @@ const Map = (props) => {
             });
             new window.google.maps.Marker({ position: center, map: map });
         });
-
-        // const map = new window.google.maps.Map(mapRef.current as HTMLElement, {
-        //     center: center,
-        //     zoom: zoom,
-        // });
-    }, [center, zoom]);
+    }, [center, zoom, mapsKey]);
 
     return (
         <div ref={mapRef} className={`map ${props.className}`} style={props.style}>
