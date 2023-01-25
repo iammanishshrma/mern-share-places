@@ -5,6 +5,7 @@ import User from 'src/user/pages/User';
 import NewPlace from 'src/places/pages/NewPlace';
 import PageNotFound from 'src/404/PageNotFound';
 import UserPlaces from 'src/places/pages/UserPlaces';
+import UpdatePlace from 'src/places/pages/UpdatePlace';
 
 const router = createBrowserRouter([
     {
@@ -22,6 +23,10 @@ const router = createBrowserRouter([
             {
                 path: '/:userId/places',
                 element: <UserPlaces />,
+            },
+            {
+                path: '/places/:placeId/edit',
+                element: <UpdatePlace />,
             },
             {
                 path: '*',

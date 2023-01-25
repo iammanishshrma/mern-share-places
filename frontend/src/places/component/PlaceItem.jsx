@@ -41,7 +41,7 @@ const PlaceItem = (props) => {
                         <Button onClick={openMapHanlder} inverse>
                             VIEW ON MAP
                         </Button>
-                        <Button to={`/places/${props.id}`}>EDIT</Button>
+                        <Button to={`/places/${props.id}/edit`}>EDIT</Button>
                         <Button danger>DELETE</Button>
                     </div>
                 </Card>
