@@ -25,7 +25,7 @@ const router = createBrowserRouter([
                 element: <UserPlaces />,
             },
             {
-                path: '/places/:placeId/edit',
+                path: '/places/:placeId',
                 element: <UpdatePlace />,
             },
             {
