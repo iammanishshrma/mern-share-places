@@ -6,6 +6,9 @@ import NewPlace from 'src/places/pages/NewPlace';
 import PageNotFound from 'src/404/PageNotFound';
 import UserPlaces from 'src/places/pages/UserPlaces';
 import UpdatePlace from 'src/places/pages/UpdatePlace';
+import Auth from 'src/user/pages/Auth';
+import ProtectedRoute from './ProtectedRoutes';
+import UnProtectedRoute from './UnProtectedRoutes';
 
 const router = createBrowserRouter([
     {
@@ -17,16 +20,33 @@ const router = createBrowserRouter([
                 element: <User />,
             },
             {
-                path: '/places/new',
-                element: <NewPlace />,
+                path: '/auth',
+                element: (
+                    <UnProtectedRoute to="/auth">
+                        <Auth />
+                    </UnProtectedRoute>
+                ),
             },
             {
                 path: '/:userId/places',
                 element: <UserPlaces />,
             },
+
+            {
+                path: '/places/new',
+                element: (
+                    <ProtectedRoute>
+                        <NewPlace />
+                    </ProtectedRoute>
+                ),
+            },
             {
                 path: '/places/:placeId',
-                element: <UpdatePlace />,
+                element: (
+                    <ProtectedRoute>
+                        <UpdatePlace />,
+                    </ProtectedRoute>
+                ),
             },
             {
                 path: '*',
