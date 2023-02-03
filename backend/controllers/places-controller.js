@@ -80,8 +80,6 @@ const createPlace = (req, res, next) => {
         creator,
     };
 
-    console.log("createdPlace", createdPlace);
-
     DUMMY_PLACES.push(createdPlace);
     res.status(201).json({
         place: createdPlace,
