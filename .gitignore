@@ -5,6 +5,7 @@
 /backend/node_modules
 /frontend/.env
 /backend/.env
+/backend/utils/location.js
 /node_modules
 /.pnp
 .pnp.js
